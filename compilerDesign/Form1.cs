@@ -321,7 +321,7 @@ namespace compilerDesign
 				else if ( prevInput2.name == "=" && input.type == "number" ) {
 					prevInput2 = input;
 					if (f == 1)
-					{
+					{ //
 						   varsize.Add(prevInput2.name);
 						   Lvar[ct].integer = Convert.ToInt32(prevInput2.name);
 					
@@ -337,7 +337,8 @@ namespace compilerDesign
 				}
 				else if ( prevInput2.type == "number" && operators.Contains( input.name ) ) {
 					if (f == 1)
-					{ number = Convert.ToInt32(prevInput2.name);
+					{ //
+						number = Convert.ToInt32(prevInput2.name);
 						number2 = Convert.ToInt32(prevInput2.name);
 						prevtype = prevInput2.type;
 						
@@ -356,11 +357,11 @@ namespace compilerDesign
 				}
 				else if ( operators.Contains( prevInput2.name ) && input.type == "number" ) {
 					if(prevInput2.name=="+")
-                    {
+                    { //
 					
 
 						if (f == 1 && prevtype == "number" )
-						{
+						{ //
 							
 							Lvar[ct].integer = number + Convert.ToInt32(input.name);
 							varsize.Add(Convert.ToString(Lvar[ct].integer));
